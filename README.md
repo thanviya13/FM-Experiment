@@ -65,30 +65,61 @@ MODEL GRAPH:
 
 
 Program
-
+```
+Ac=20.6;
+fc=4200;
+Am=10.3;
+fm=420;
+fs=50000;
+t=0:1/fs:2/fm;
+beta=3.6;
+Em=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,Em);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Message Signal m(t)");
+Ec=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,Ec);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Carrier Signal c(t)");
+Efm=Ac*cos(2*3.14*fc*t+beta*sin(2*3.14*fm*t));
+subplot(3,1,3);
+plot(t,Efm);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("FM Modulated Signal (USB)");
+```
 
 Output Waveform
 
+<img width="824" height="458" alt="image" src="https://github.com/user-attachments/assets/065642bc-5097-403d-97c7-81cd848ccbc8" />
 
 
 Tabulation
 
+<img width="364" height="660" alt="image" src="https://github.com/user-attachments/assets/d29014c5-ea56-4aba-81e8-100f72e1edc4" />
 
 
 Calculation
 
+<img width="375" height="619" alt="image" src="https://github.com/user-attachments/assets/81055e58-040c-4558-81a6-e3ef36131493" />
 
 
-Frequency Deviation Practical = 
+Frequency Deviation Practical = 545.45
 
-Modulation Index Practical	= 
+Modulation Index Practical	= 0.3652
 
-Modulation Index Theoretical	=
+
+Modulation Index Theoretical	=0.5
 
 
 
 RESULT:
 
-Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
+<img width="299" height="675" alt="image" src="https://github.com/user-attachments/assets/66c289ea-007b-436d-af32-fd1a0f50bdb5" />
+
 
 
